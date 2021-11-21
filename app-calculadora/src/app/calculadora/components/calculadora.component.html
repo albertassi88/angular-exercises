@@ -9,6 +9,7 @@
     <input
       type="text"
       [value]="display"
+      id="display"
       readonly
     />
     <button
@@ -68,12 +69,14 @@
     <button
       type="button"
       (click)="adicionarNumero('2')"
+      id="btn2"
     >
       2
     </button>
     <button
       type="button"
       (click)="adicionarNumero('3')"
+      id="btn3"
     >
       3
     </button>
@@ -98,12 +101,14 @@
     <button
       type="button"
       (click)="calcular()"
+      id="btnCalcular"
     >
       =
     </button>
     <button
       type="button"
       (click)="definirOperacao('+')"
+      id="btnSoma"
     >
       +
     </button>
