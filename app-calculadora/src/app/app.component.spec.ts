@@ -1,12 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { CalculadoraModule } from './calculadora/calculadora.module'; //inclusão do Modulo no test
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        CalculadoraModule //inclusão do Modulo no test
       ],
       declarations: [
         AppComponent
