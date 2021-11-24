@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { NovoServiceService } from './novo-service/novo-service.service'; // novo service
+
 @Component({
   selector: 'app-novo-componente',
   templateUrl: './novo-componente.component.html',
@@ -7,12 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoComponenteComponent implements OnInit {
 
-  nomeUrl: string;  //atributo
+  cursos: string[];  //atributo
 
-  cursos: string[] = ['Java', 'Js', 'Angular', 'Python'];
-
-  constructor() {
-    this.nomeUrl = 'www.uol.com.br';
+  constructor(private novoService: NovoServiceService) { // as injeções de dependências são feitas dentro do construtor
+    this.cursos = this.novoService.getCursos();
   }
 
   ngOnInit(): void {
