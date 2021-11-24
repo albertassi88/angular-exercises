@@ -1,5 +1,2 @@
-## Service
+## Exemplos de Style, Class e Event Binding 
 
-Para criar um service:
-
-- ng g service nomeDaPasta/ENomeDoService

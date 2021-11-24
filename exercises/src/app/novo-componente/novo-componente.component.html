@@ -1,0 +1,43 @@
+<p>{{ exemplo1 }}</p>
+
+<p>{{ 50 + 50 }}</p>  //pode fazer cálculos
+
+<p>{{ getExemplo2() }}</p>
+
+<img [src]="exemplo3">
+
+
+// class Binding
+<select #classe (change)="0">
+  <option value="nome1">Nome1</option>
+  <option value="nome2">Nome2</option>
+</select>
+
+<div [class.blue]="classe.value == 'nome1'">
+  Texto 1
+</div>
+<div  [class.green]="classe.value == 'nome2'">
+  Texto 1
+</div>
+
+
+//Event Binding
+<button (click)="botaoExemplo4()">Button</button>
+
+<input (keyup)="onKeyUpExemplo5($event)">
+
+<input (keyup.enter)="salvarExemplo6(campoInput.value)"
+#campoInput
+>
+
+<p>{{ valorSalvo }}</p>
+
+<span
+  (mouseover)="onMouseExemplo7()"
+  (mouseout)="onMouseExemplo7()"
+  [class.cor]="isMouseOver"
+>
+  Mudar Cor
+</span>
+
+
