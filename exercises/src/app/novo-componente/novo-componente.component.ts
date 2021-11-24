@@ -33,4 +33,11 @@ export class NovoComponenteComponent {
     this.isMouseOver = !this.isMouseOver;
   }
 
+  exemplo8: string = 'abc';
+
+  exemplo9: any = {
+    nome: 'def',
+    idade: 20
+  }
+
 }

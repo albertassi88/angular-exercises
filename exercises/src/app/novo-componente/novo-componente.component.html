@@ -40,4 +40,35 @@
   Mudar Cor
 </span>
 
+<br>
+
+//Exemplos Data Binding
+<article>
+  <h3>Two-way Data Binding</h3>
+  <div>
+    <input
+      [value]="exemplo8"
+      (input)="exemplo8 = pegarValor.value"
+      #pegarValor
+    >
+
+    <input
+      [ngModel]="exemplo8"
+      (ngModelChange)="exemplo8 = $event"
+    >
+
+    <input
+      [(ngModel)]="exemplo8"
+    >
+
+    <p>Você digitou: {{ exemplo8 }}</p>
+
+  </div>
+</article>
+
+<input [(ngModel)]="exemplo9.nome">
+<input [(ngModel)]="exemplo9.idade">
+<p>{{ exemplo9.nome }} e {{ exemplo9.idade }}</p>
+
+
 
