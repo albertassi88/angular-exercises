@@ -1,1 +1,4 @@
-<app-novo-componente></app-novo-componente>
+<app-ciclo-de-vida [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo-de-vida>
+<button (click)="mudarValor()">Mudar Valor</button>
+<button (click)="destruirCiclo()">Destruir Ciclo</button>
+

@@ -3,12 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NovoComponenteComponent } from './novo-componente/novo-componente.component';
+import { CicloDeVidaComponentComponent } from './ciclo-de-vida-component/ciclo-de-vida-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NovoComponenteComponent,
+    CicloDeVidaComponentComponent,
   ],
   imports: [
     BrowserModule,

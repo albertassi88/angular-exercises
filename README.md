@@ -1,2 +1,2 @@
-## Exemplos de Style, Class e Event Binding 
+## Exemplos de ciclo de vida dos componentes
 
