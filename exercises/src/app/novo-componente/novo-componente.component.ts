@@ -1,21 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-novo-componente',
+  selector: 'app-diretiva',
   templateUrl: './novo-componente.component.html',
   styleUrls: ['./novo-componente.component.css']
 })
-export class NovoComponenteComponent implements OnInit {
+export class NovoComponenteComponent {
 
   nomeUrl: string;  //atributo
 
-  cursos: string[] = ['Java', 'Js', 'Angular', 'Python'];
+  cursosNgFor: string[] = ['Java', 'Js', 'Angular', 'Python'];
 
   constructor() {
     this.nomeUrl = 'www.uol.com.br';
   }
 
-  ngOnInit(): void {
+  cursosNgIf: string[] = [];
+
+  mostarCursosNgIf: boolean = true;
+
+  onMostrarCursosNgIf() {
+    this.mostarCursosNgIf = !this.mostarCursosNgIf;
+  }
+
+  abaNgSwitch: string = 'home';
+
+  favoritoNgClass: boolean = false;
+
+  onMostrarFavorito() {
+    this.favoritoNgClass = !this.favoritoNgClass;
+  }
+
+  ativoNgStyle: boolean = false;
+
+  mudarAtivoNgStyle() {
+    this.ativoNgStyle = !this.ativoNgStyle;
   }
 
 }
