@@ -9,13 +9,18 @@ import { NovoServiceService } from './novo-service/novo-service.service'; // nov
 })
 export class NovoComponenteComponent implements OnInit {
 
-  cursos: string[];  //atributo
+  cursos: string[] = [];  //atributo
 
   constructor(private novoService: NovoServiceService) { // as injeções de dependências são feitas dentro do construtor
-    this.cursos = this.novoService.getCursos();
+
   }
 
   ngOnInit(): void {
+    this.cursos = this.novoService.getCursos();
+  }
+
+  onSalvar(valor: string) {
+    this.novoService.addCurso(valor);
   }
 
 }
