@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NovoComponenteComponent } from './novo-componente/novo-componente.component';
+import { NovaDirective } from './diretiva/nova.directive';  //diretiva criada
 
 @NgModule({
   declarations: [
     AppComponent,
-    NovoComponenteComponent
+    NovoComponenteComponent,
+    NovaDirective,  //diretiva criada
   ],
   imports: [
     BrowserModule
