@@ -3,16 +3,22 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NovoComponenteComponent } from './novo-componente/novo-componente.component';
+import { ComponentPaiComponent } from './components/component-pai/component-pai.component';
+import { ComponentFilhoComponent } from './components/component-filho/component-filho.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NovoComponenteComponent,
+    ComponentPaiComponent,
+    ComponentFilhoComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
+  ],
+  exports: [
+    ComponentPaiComponent,
+    ComponentFilhoComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

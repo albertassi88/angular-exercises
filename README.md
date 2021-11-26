@@ -1,2 +1,1 @@
-## Exemplos de Style, Class e Event Binding 
-
+## Exemplo de comunição entre @Input e @Output
