@@ -1,1 +1,1 @@
-## Exemplo de comunição entre @Input e @Output
+## Exemplos de Pipes

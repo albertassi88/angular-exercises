@@ -1,0 +1,16 @@
+<h4>Exemplos de Pipes</h4>
+
+<!--uppercase transforma tudo em letras maiuscula-->
+<p>Título: {{ livro.titulo | uppercase }}</p>
+<!--lowercase transforma tudo em letras minuscula-->
+<p>Descrição: {{ livro.descricao | lowercase }}</p>
+<!--number determina a quantidade de casas decimais-->
+<p>Rating: {{ livro.rating | number:'1.1-2' }}</p>
+<p>Páginas: {{ livro.numeroPaginas }}</p>
+<!--currency determina a moeda a ser usada-->
+<p>Preço: {{ livro.preco | currency:'BRL' }}</p>
+<!--Date determina o formato da data-->
+<p>Data de Lançamento: {{ livro.dataLancamento | date:'dd-MM-yyyy' }}</p>
+<p>URL: {{ livro.url }}</p>
+<!--async serve para mostrar valores assíncronos-->
+<p>{{ valorAsync | async }}</p>
