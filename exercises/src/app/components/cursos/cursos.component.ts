@@ -1,6 +1,4 @@
-import { CursosService } from './cursos.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
@@ -9,16 +7,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CursosComponent implements OnInit {
 
-  cursos: any[] = [];
 
-  constructor(
-    private cursosService: CursosService,
-    private router: ActivatedRoute
-  ) { }
+  constructor( ) { }
 
   ngOnInit(): void {
-    this.cursos = this.cursosService.getCursos();
-    console.log(this.router)
+
   }
 
 }
