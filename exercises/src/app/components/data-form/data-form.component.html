@@ -1,0 +1,110 @@
+<!--Reativo-->
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()"> <!--usar o formGroup e ngSubmit-->
+  <div [ngClass]="aplicaCssErro('nome')"> <!--usar o ngClass-->
+    <label for="nome">Nome</label>
+    <input
+      type="text"
+      id="nome"
+      placeholder="Nome"
+      name="nome"
+      formControlName="nome"
+    > <!--inserir o formControlName-->
+  </div>
+  <app-campo-control-erro
+    [mostrarErro]="verificaValidTouched('nome')"
+    msgErro="nome é obrigatório!"
+  >
+  </app-campo-control-erro> <!--componente app-campo-control-erro-->
+
+  <div [ngClass]="aplicaCssErro('email')"> <!--usar o ngClass-->
+    <label for="email">E-mail</label>
+    <input
+      type="text"
+      id="email"
+      placeholder="E-mail"
+      name="email"
+      formControlName="email"
+    > <!--inserir o formControlName-->
+  </div>
+  <app-campo-control-erro
+    [mostrarErro]="verificaValidTouched('email')"
+    msgErro="email é obrigatório!"
+  >
+  </app-campo-control-erro> <!--componente app-campo-control-erro-->
+  <app-campo-control-erro
+    [mostrarErro]="verificaEmailInvalido()"
+    msgErro="email inválido!"
+  >
+  </app-campo-control-erro> <!--componente app-campo-control-erro-->
+
+  <div formGroupName="endereco" style="border: none">
+    <div [ngClass]="aplicaCssErro('endereco.cep')">
+      <label for="cep">Cep</label>
+      <input
+        id="cep"
+        placeholder="cep"
+        name="cep"
+        formControlName="cep"
+        (blur)="consultaCep()"
+      >
+    </div>
+    <div [ngClass]="aplicaCssErro('endereco.numero')">
+      <label for="numero">Número</label>
+      <input
+        id="numero"
+        placeholder="numero"
+        name="numero"
+        formControlName="numero"
+      >
+    </div>
+    <div [ngClass]="aplicaCssErro('endereco.complemento')">
+      <label for="complemento">Complemento</label>
+      <input
+        id="complemento"
+        placeholder="complemento"
+        name="complemento"
+        formControlName="complemento"
+      >
+    </div>
+    <div [ngClass]="aplicaCssErro('endereco.rua')">
+      <label for="rua">Rua</label>
+      <input
+        id="rua"
+        placeholder="rua"
+        name="rua"
+        formControlName="rua"
+      >
+    </div>
+    <div [ngClass]="aplicaCssErro('endereco.bairro')">
+      <label for="bairro">Bairro</label>
+      <input
+        id="bairro"
+        placeholder="bairro"
+        name="bairro"
+        formControlName="bairro"
+      >
+    </div>
+    <div [ngClass]="aplicaCssErro('endereco.cidade')">
+      <label for="cidade">Cidade</label>
+      <input
+        id="cidade"
+        placeholder="cidade"
+        name="cidade"
+        formControlName="cidade"
+      >
+    </div>
+    <div [ngClass]="aplicaCssErro('endereco.estado')">
+      <label for="rua">Estado</label>
+      <input
+        id="estado"
+        placeholder="estado"
+        name="estado"
+        formControlName="estado"
+      >
+    </div>
+  </div>
+  <button type="submit" >
+    Enviar
+  </button>
+</form>
+

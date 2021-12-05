@@ -1,0 +1,107 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)"> <!--inserir variavel #form e ngSubmit-->
+  <div>
+    <label for="nome">Nome</label>
+    <input
+      type="text"
+      id="nome"
+      placeholder="Nome"
+      name="nome"
+      required
+      ngModel
+      #nome="ngModel"
+    > <!--inserir ngModel e name-->
+    <div *ngIf="!nome.valid && nome.touched"> <!--valid e touched são classes do css-->
+      <p>nome é obrigatório!</p>
+    </div>
+  </div>
+  <div>
+    <label for="email">E-mail</label>
+    <input
+      type="text"
+      id="email"
+      placeholder="E-mail"
+      name="email"
+      required
+      email
+      ngModel
+      #email="ngModel"
+    > <!--inserir ngModel e name-->
+  </div>
+  <div *ngIf="!email.valid && email.touched"> <!--valid e touched são classes do css-->
+    <p>e-mail é obrigatório!</p>
+  </div>
+  <div>
+    <label for="cep">Cep</label>
+    <input
+      id="cep"
+      placeholder="cep"
+      name="cep"
+      ngModel
+      #cep="ngModel"
+      (blur)="consultaCep(cep, form)"
+    > <!--blur serve para quando o usuário clicar fora do input ele captura os dados-->
+  </div>
+  <div>
+    <label for="numero">Número</label>
+    <input
+      id="numero"
+      placeholder="numero"
+      name="numero"
+      ngModel
+      #numero="ngModel"
+    >
+  </div>
+  <div>
+    <label for="complemento">Complemento</label>
+    <input
+      id="complemento"
+      placeholder="complemento"
+      name="complemento"
+      ngModel
+      #complemento="ngModel"
+    >
+  </div>
+  <div>
+    <label for="rua">Rua</label>
+    <input
+      id="rua"
+      placeholder="rua"
+      name="rua"
+      ngModel
+      #rua="ngModel"
+    >
+  </div>
+  <div>
+    <label for="bairro">Bairro</label>
+    <input
+      id="bairro"
+      placeholder="bairro"
+      name="bairro"
+      ngModel
+      #bairro="ngModel"
+    >
+  </div>
+  <div>
+    <label for="cidade">Cidade</label>
+    <input
+      id="cidade"
+      placeholder="cidade"
+      name="cidade"
+      ngModel
+      #cidade="ngModel"
+    >
+  </div>
+  <div>
+    <label for="rua">Estado</label>
+    <input
+      id="estado"
+      placeholder="estado"
+      name="estado"
+      ngModel
+      #estado="ngModel"
+    >
+  </div>
+  <button type="submit" [disabled]="!form.valid"> <!--tipo submit, form.valid esta acessando a classe do css-->
+    Enviar
+  </button>
+</form>

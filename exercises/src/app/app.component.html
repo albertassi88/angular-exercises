@@ -1,20 +1,13 @@
-<!--routerLink para mudar as rotas-->
-<!--routerLinkActive para alterar a cor quando a rota for selecionada-->
-<!--routerLinkActiveOptions para ativar e desativar a rota selecionada-->
+<p>Home</p>
 <nav>
-  <div class="nav">
-    <ul>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <a routerLink="/">Home</a>
-      </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <a routerLink="login">Login</a>
-      </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <a routerLink="cursos">Cursos</a>
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/templateForm']">Form - Template Driven</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/dataForm']">Form - Data Driven</a>
+    </li>
+  </ul>
 </nav>
 
 <router-outlet></router-outlet>

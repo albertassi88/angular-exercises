@@ -1,3 +1,2 @@
-## Exemplo do uso de CanActivate
+## Exemplos de uso do Data-Form e Template-Form
 
-O CanActivate serve para permitir se o usuário pode acessar ou não uma determinada rota.
