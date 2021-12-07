@@ -1,5 +1,0 @@
-/*essas classes usadas são do próprio css referente ao required e email colocados no input*/
-
-.ng-invalid.ng-touched:not(form) {
-  border: 1px solid red;
-}

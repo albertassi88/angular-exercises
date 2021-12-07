@@ -1,0 +1,33 @@
+<nav class="container-nav">
+  <ul>
+    <li>
+      <a>Home</a>
+    </li>
+    <li>
+      <a>Cursos</a>
+    </li>
+  </ul>
+</nav>
+
+<h1>Cursos</h1>
+
+<div *ngFor="let curso of exemploGet | async" class="curso-btn">
+  <p>
+    {{ curso.nome }}
+  </p>
+  <button>Atualizar Curso</button>
+  <button>Remover Curso</button>
+</div>
+
+<div *ngIf="errorGet | async">
+  Erro ao carregar os cursos
+</div>
+
+<div class="button">
+  <a routerLink="/novo">Novo Curso</a>
+</div>
+
+
+
+
+
