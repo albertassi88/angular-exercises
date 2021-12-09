@@ -1,2 +1,2 @@
-## Exemplos de uso do Http
+## Exemplo de uso de Herança
 

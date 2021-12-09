@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
 import { CursosService } from './../cursos.service';
-// import { map, switchMap } from 'rxjs';
+import { map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-form-cursos',
@@ -24,13 +24,9 @@ export class FormCursosComponent implements OnInit {
 
   ngOnInit(): void {
 
-    //forma 3 de fazer
-
-    const curso = this.route.snapshot.data['curso'];  //'curso' - tem que por o mesmo nome que esta no resolve do routing do guard
-
     this.formulario = this.fb.group({
-      id: [curso.id],
-      nome: [curso.nome, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]]
+      id: [null],
+      nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]]
     });
 
     //forma 1 de fazer
@@ -47,23 +43,20 @@ export class FormCursosComponent implements OnInit {
 
     //forma 2 de fazer
 
-    /**this.route.params.pipe(
+    this.route.params.pipe(
       map((params: any) => params.id), //map - mapeia o valor recebido e retorna o valor modificado
       switchMap(id => this.cursosService.listById(id)), //switchMap - retorna outro Observable, ele cancela as requisições anteriores e retona o valor do último pedido.
-    ).subscribe(curso => this.updateForm(curso)); */
-
-
-
+    ).subscribe(curso => this.updateForm(curso));
   }
 
   //só é usado na forma 1 ou 2 de fazer
 
-  // updateForm(curso: any) {  //popular o formulário
-  //   this.formulario.patchValue({
-  //     id: curso.id,
-  //     nome: curso.nome
-  //   })
-  // }
+  updateForm(curso: any) {  //popular o formulário
+    this.formulario.patchValue({
+      id: curso.id,
+      nome: curso.nome
+    })
+  }
 
   onSalvar() {  //Post
     if (this.formulario.valid) {

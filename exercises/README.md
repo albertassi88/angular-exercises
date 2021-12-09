@@ -1,4 +1,4 @@
-## Exemplo do uso do http
+## Exemplo de uso de Herança
 
 ## CRUD
 
