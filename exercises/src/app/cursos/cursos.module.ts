@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { CursosListaComponent } from './cursos-lista/cursos-lista.component';
 import { FormCursosComponent } from './form-cursos/form-cursos.component';
 
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     CursosListaComponent,
@@ -11,10 +14,11 @@ import { FormCursosComponent } from './form-cursos/form-cursos.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports: [
     CursosListaComponent,
-    FormCursosComponent
   ]
 })
 export class CursosModule { }
