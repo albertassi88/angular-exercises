@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { ReactiveSearchModule } from './components/reactive-search.module';
 
-import { UploadFileModule } from './upload-file/upload-file.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { UploadFileModule } from './upload-file/upload-file.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    UploadFileModule
+    ReactiveSearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
