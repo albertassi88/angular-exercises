@@ -1,10 +1,6 @@
-## Exemplo de uso de Herança
+## Exemplo de uso de upload e downloads de arquivos
 
-## CRUD
+Back-end com Node JS (na pasta server) 
+- npm init -y 
 
-Para simular o back-end foi usado o json-server
-instalação:
-- npm i -g json-server
-
-Para rodaro json server:
-- json-server --watch db.json
+- npm i -save express connect-multiparty cors
