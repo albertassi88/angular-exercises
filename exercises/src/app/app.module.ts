@@ -3,17 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { ReactiveSearchModule } from './components/reactive-search.module';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveSearchModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

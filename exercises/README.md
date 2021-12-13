@@ -1,1 +1,1 @@
-## Exemplo de pesquisa
+## Exemplo do uso do loadChildren (lazy loading)
