@@ -1,1 +1,1 @@
-## Exemplo de comunição entre @Input e @Output
+## Exemplos de comunicação entre os componentes usando: @Input, @Output, @ViewChild e Subscribe
