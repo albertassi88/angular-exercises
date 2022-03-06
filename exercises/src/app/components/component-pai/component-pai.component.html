@@ -1,1 +1,10 @@
-<app-component-filho [informacaoFilho]="informacaoPai"></app-component-filho>
+<app-component-filho
+  [inputReceberValorDoPai]="valorPai"
+  (outputEnviarValorParaOPai)="recebeEmit($event)"
+></app-component-filho>
+
+<app-component-irmao
+[inputReceberValorDoPai]="valorPai"
+></app-component-irmao>
+
+{{message}}
