@@ -1,0 +1,23 @@
+.container-button {
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+  background-color: rgb(196, 236, 236);
+  border: 1px solid rgb(126, 126, 223);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .box-button {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 12px;
+    position: absolute;
+    bottom: -6px;
+  }
+
+}
